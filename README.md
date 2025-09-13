@@ -10,8 +10,8 @@
 npm i
 cp .env.example .env
 # заполни GOOGLE_CLIENT_ID/SECRET (Google Cloud OAuth) и SUPERADMIN_EMAIL
-npx prisma generate
-npx prisma migrate dev --name init
+npm run prisma:generate
+npm run prisma:migrate
 npm run seed
 npm run dev
 
