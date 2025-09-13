@@ -47,8 +47,11 @@ model ServiceOrder {
   id           Int       @id @default(autoincrement())
   description  String
   status       OrderStatus @default(PENDING)
+
+=======
 =======
   status       String    @default("pending")
+
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
   vehicle      Vehicle   @relation(fields: [vehicleId], references: [id])
@@ -62,5 +65,8 @@ enum OrderStatus {
   IN_PROGRESS
   COMPLETED
 }
+
 =======
+=======
+
 

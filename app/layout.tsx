@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-=======
 
 export const metadata: Metadata = {
   title: "K+ CRM",
@@ -29,8 +28,11 @@ export default function RootLayout({
         </header>
         <div className="max-w-4xl mx-auto">{children}</div>
       </body>
+
+=======
 =======
       <body>{children}</body>
+
     </html>
   );
 }
