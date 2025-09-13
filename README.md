@@ -1,12 +1,18 @@
 # K+ CRM (starter)
 Стартовая CRM для автосервиса **K+**: Next.js 14 + Prisma + Auth.js (Google) + Tailwind + Лиды-как-чаты.
 
+## Возможности
+- Базовая схема Prisma со справочниками клиентов, автомобилей и заказ-нарядов
+- Страница `/orders` показывает список заказов сервиса
+- Страница `/orders/new` позволяет создавать новые заказ-наряды
+- Посев демоданных командой `npm run seed`
+
 ## Установка
 npm i
 cp .env.example .env
 # заполни GOOGLE_CLIENT_ID/SECRET (Google Cloud OAuth) и SUPERADMIN_EMAIL
-npx prisma generate
-npx prisma migrate dev --name init
+npm run prisma:generate
+npm run prisma:migrate
 npm run seed
 npm run dev
 
