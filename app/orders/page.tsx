@@ -1,5 +1,9 @@
 import prisma from "@/lib/prisma";
 
+import Link from "next/link";
+=======
+
+
 export default async function OrdersPage() {
   const orders = await prisma.serviceOrder.findMany({
     include: {
@@ -15,6 +19,16 @@ export default async function OrdersPage() {
 
   return (
     <main className="p-8">
+      <div className="flex items-center justify-between mb-4">
+        <h1 className="text-2xl font-bold">Service Orders</h1>
+        <Link
+          href="/orders/new"
+          className="text-sm text-blue-600 hover:underline"
+        >
+          New Order
+        </Link>
+      </div>
+=======
       <h1 className="text-2xl font-bold mb-4">Service Orders</h1>
       <table className="min-w-full text-sm">
         <thead>
