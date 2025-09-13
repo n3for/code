@@ -28,6 +28,11 @@ export default function RootLayout({
         </header>
         <div className="max-w-4xl mx-auto">{children}</div>
       </body>
+
+=======
+=======
+      <body>{children}</body>
+
     </html>
   );
 }

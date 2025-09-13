@@ -1,5 +1,12 @@
 import prisma from "@/lib/prisma";
+
 import Link from "next/link";
+=======
+
+import Link from "next/link";
+=======
+
+
 
 export default async function OrdersPage() {
   const orders = await prisma.serviceOrder.findMany({
@@ -25,6 +32,11 @@ export default async function OrdersPage() {
           New Order
         </Link>
       </div>
+
+=======
+=======
+      <h1 className="text-2xl font-bold mb-4">Service Orders</h1>
+
       <table className="min-w-full text-sm">
         <thead>
           <tr className="text-left border-b">
@@ -37,6 +49,7 @@ export default async function OrdersPage() {
         <tbody>
           {orders.map((order) => (
             <tr key={order.id} className="border-b">
+
               <td className="py-2">
                 <Link
                   href={`/orders/${order.id}`}
@@ -45,6 +58,9 @@ export default async function OrdersPage() {
                   {order.description}
                 </Link>
               </td>
+=======
+              <td className="py-2">{order.description}</td>
+
               <td className="py-2">
                 {order.vehicle.make} {order.vehicle.model}
               </td>
